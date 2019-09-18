@@ -1,0 +1,612 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+body {
+    background-color:rgb(63, 62, 65) ;
+    font-family: 'Asap', sans-serif;
+    background-size:cover;
+    padding: 0;
+    margin:0;
+    
+   
+
+
+}
+
+
+#box {
+
+    border-radius: 15px;
+  background-color:white;
+
+  box-shadow: 5px 5px grey;
+  margin-top: 1cm;
+  padding-bottom: 3cm;
+}
+
+#text {
+    border-radius: 15px;
+
+    text-align:center;
+    color:rgb(60, 58, 76);
+    background-color:rgb(219, 219, 219);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Asap', sans-serif;
+
+    
+}
+#pargraph {
+  text-align: center;
+  color:rgb(139, 131, 131);
+  font-family: 'Asap', sans-serif;
+
+}
+
+:hover#pargraph{
+  transition: 1s;
+  color:white;
+}
+
+
+#button1 {
+  border-radius: 100%;
+  font-size:30;
+  background-color: rgb(245, 45, 22);
+
+  padding:30px;
+  
+  text-decoration: none;
+  color:white;
+  padding-bottom: 50px;
+  padding-top:50px;
+  box-shadow: 5px 5px 3px rgb(189, 9, 9);
+
+
+
+}
+#button1:hover {
+transition: 1s;
+box-shadow: 1px -3px 20px rgb(172, 17, 17);
+}
+
+#button1:active {
+box-shadow: 10px -3px 3px rgb(172, 17, 17);
+}
+
+
+
+
+#button {
+    border-radius: 100%;
+    font-size:30;
+    background-color: rgb(245, 45, 22);
+
+    padding:30px;
+    
+    text-decoration: none;
+    color:white;
+    padding-bottom: 50px;
+    padding-top:50px;
+    box-shadow: 5px 5px 3px rgb(189, 9, 9);
+  
+
+
+}
+ #button:hover {
+  transition: 1s;
+  box-shadow: 1px -3px 20px rgb(172, 17, 17);
+}
+
+#button:active {
+  box-shadow: 10px -3px 3px rgb(172, 17, 17);
+}
+
+
+
+
+  
+/* ------------------------------------------ L O B B Y --------------------------------------------- */
+  
+  ul {
+      margin: 0;
+      padding: 0;
+       list-style: none;
+      
+      
+   }
+   ul li {
+  
+   float: left;
+   width: 200px;
+   height: 40px;
+   background-color: black;
+   opacity: .8;
+   line-height: 40px;
+   text-align: center;
+   font-size:20px;
+
+
+
+   
+   
+   box-shadow: 5px 5px rgba(45, 45, 45, 0.13);
+   
+   
+   
+   
+   }
+
+
+   
+   
+   
+   ul li a {
+       text-decoration: none;
+       color: white;
+       display: block;
+       
+       border-radius: 9cm;
+       
+   }
+   ul li a:hover {
+     transition: 1s;
+     background-color: white;
+     color:black;
+    border-radius: 0%;
+    cursor: pointer;
+   }
+   
+   ul li ul li {
+     
+       display: none;
+       
+   }
+   ul li:hover ul li {
+       display: block;
+      
+   }
+   
+   
+   .logo {
+      float:left;
+      width: 2cm;
+      padding-bottom: 4px;
+      
+  
+  
+      
+    
+      
+   }
+  
+
+  
+  
+   .menu{
+      position: fixed;
+      background-color:white;
+      /* padding-right:10cm; */
+      padding-bottom: 2px;
+      
+      padding-right: 0px;
+    height: 100px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    
+      
+     box-shadow: 5px 5px rgba(45, 45, 45, 0.16);
+    z-index: 99;
+
+   }
+
+
+   .marging{
+    padding-top: 15px;
+    padding-left: 10px;
+   }
+
+   .menu:hover{
+    transition: 1s;
+    background-color:rgb(71, 67, 67);
+    color:white;
+   }
+
+
+
+/* ------------------------------------------ L O B B Y --------------------------------------------- */
+#welcome {
+ 
+  padding-top:7px;
+ 
+
+  position: absolute;
+  border-radius: 15px;
+  top: 100px;
+  height: 1030px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+
+  background-color: white
+
+  
+  
+  
+}
+
+#welcome:hover{
+  transition: 1s;
+  color:white;
+  background-color:black;
+}
+
+
+
+
+/* ---------------------------------------------- C A R D - G A M E-------------------------------------------------------------- */
+  
+
+
+
+
+#game {
+    position: absolute;
+    top: 1140px;
+  
+  }
+
+  #games {
+    background: #212121;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    color:white
+    
+
+  }
+
+
+  #games:hover{
+    transition: 1s;
+    color: #212121;
+    background-color:white;
+   
+
+  }
+
+  
+
+
+
+   .border {
+    display:inline-block;
+    align-content: center;
+    
+    border-radius: 15px;
+   padding-left:2cm;
+   padding-top:20px;
+    margin:0;
+
+    
+    
+    
+  }
+
+  
+  
+  .card{
+    width: 200px; 
+    overflow: hidden;
+    background-color: #FFFFFF;
+     
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+  }
+
+
+  .card1{
+    width: 200px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+     
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+  }
+  
+
+  .card2{
+    width: 200px; 
+    overflow: hidden;
+    background-color: #FFFFFF;
+     
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+  }
+
+
+  .card3{
+    width: 200px; 
+    overflow: hidden;
+    background-color: #FFFFFF;
+     
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+    
+  }
+
+  .card4{
+    width: 200px; 
+    overflow: hidden;
+    background-color: #FFFFFF;
+     
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+ 
+  }
+
+    .card:first-of-type{
+      margin-right: 25px;
+      
+    }
+    .card1:first-of-type{
+      margin-right: 25px;
+      
+    }
+
+    .card2:first-of-type{
+      margin-right: 25px;
+      
+    }
+
+    .card3:first-of-type{
+      margin-right: 25px;
+      
+    }
+
+    .card4:first-of-type{
+      margin-right: 25px;
+      
+    }
+  
+    .card:hover{
+      
+      transition: 1s;
+      
+    box-shadow: 10px -3px 60px rgb(247, 241, 241);
+    box-shadow: 0 4px px rgba(0,0,0,0.2);
+
+    }
+    .card1:hover{
+      
+      
+    box-shadow: 10px -3px 60px rgb(247, 241, 241);
+    box-shadow: 0 4px px rgba(0,0,0,0.2);
+
+    }
+
+    .card2:hover{
+      
+     
+    box-shadow: 10px -3px 60px rgb(247, 241, 241);
+    box-shadow: 0 4px px rgba(0,0,0,0.2);
+
+    }
+
+    .card3:hover{
+      
+    box-shadow: 10px -3px 60px rgb(247, 241, 241);
+    box-shadow: 0 4px px rgba(0,0,0,0.2);
+
+    }
+
+    .card4:hover{
+      
+      box-shadow: 10px -3px 60px rgb(247, 241, 241);
+      box-shadow: 0 4px px rgba(0,0,0,0.2);
+  
+      }
+  
+  .banner{
+    height: 100px;
+    width: 100%;
+    padding-top: 30px;
+    background-color: rgb(182, 165, 165);
+    background-size: cover;
+    background-position: center;
+  }
+
+  
+  
+    .card:first-of-type .banner{
+      background-image: url("images/avatar.jpg");
+   
+      
+    }
+
+    .card1:first-of-type .banner{
+      background-image: url("images/avatar1.jpg");
+   
+      
+    }
+
+
+    .card2:first-of-type .banner{
+      background-image: url("images/avatar2.png");
+   
+      
+    }
+
+    .card3:first-of-type .banner{
+      background-image: url("images/avatar3.jpg");
+   
+      
+    }
+
+
+    .card4:first-of-type .banner{
+      background-image: url("images/avatar4.jpg");
+   
+      
+    }
+
+
+    
+
+
+    
+  
+  .avatar{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #F1F1F1;
+    border-radius: 100%;
+    background-image: url("images/avatar.jpg");
+    border: #212121 solid 5px;
+  }
+
+  .avatar1{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #F1F1F1;
+    border-radius: 100%;
+    background-image: url("images/avatar1.jpg");
+    border: #212121 solid 5px;
+  }
+
+  .avatar2{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #F1F1F1;
+    border-radius: 100%;
+    background-image: url("images/avatar2.png");
+    border: #212121 solid 5px;
+  }
+
+  .avatar3{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #F1F1F1;
+    border-radius: 100%;
+    background-image: url("images/avatar3.jpg");
+    border: #212121 solid 5px;
+  }
+
+  .avatar4{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #F1F1F1;
+    border-radius: 100%;
+    background-image: url("images/avatar4.jpg");
+    border: #212121 solid 5px;
+  }
+
+
+ 
+ 
+  
+  h3, .a, .i{
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+  }
+  
+    h3{
+      margin-top: 45px;
+      margin-bottom: 5px;
+      font-size: 18px;
+      color: #212121;
+      
+    }
+  
+    .a{
+      display: block;
+      padding: 5px 0px;
+      font-size: 14px;
+      color: #9E9E9E;
+      text-decoration: none;
+    }
+  
+      .a:hover{
+        background-color: #FAFAFA;
+        color: inherit;
+      }
+  
+  .ul{
+    margin-top: 10px;
+    padding: 15px 0px;
+    background-color: #FAFAFA;
+    
+  }
+  
+    .ul .a{
+      display: inline;
+      margin-right: 10px;
+    }
+  
+      ul a:last-of-type{
+        margin-right: 0px;
+      }
+  
+        .ul .a .i:hover{
+          transform: scale(1.5);
+        }
+
+
+/* ---------------------------------------------- C A R D - G A M E-------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      

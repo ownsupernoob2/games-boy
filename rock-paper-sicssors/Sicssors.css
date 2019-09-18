@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+  background-color:rgb(159, 211, 159);
+  background-size: cover;
+  font-family: 'Asap', sans-serif;
+}
+
+header {
+    background: rgb(36, 35, 35);
+    padding: 20px;
+}
+
+
+
+
+
+header > h1 {
+   
+   color:rgb(255, 255, 255);
+   text-align: center;
+    
+}
+
+.score-board{
+    margin: 20px auto;
+    border: 3px solid rgb(8, 8, 8);
+    border-radius: 4px;
+    text-align: center;
+    width: 200px;
+    color:rgb(255, 255, 255);
+    font-size: 46px;
+    padding: 15px 20px;
+  
+    position: relative;
+
+}
+
+.badge{
+    background: rgb(27, 167, 27);
+    color: rgb(255, 255, 255);
+    font-size:14px;
+    padding: 2px 18px;
+    
+}
+
+
+#user-label {
+  position: absolute;
+    top: 30px;
+    left: -25px;
+    border-radius: 15px;
+
+}
+#computer-label {
+    position: absolute;
+      top: 30px;
+      right: -30px;
+      border-radius: 15px;
+  }
+
+.result{
+    font-size:40px;
+    color:rgb(0, 0, 0);
+}
+.result > p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.choices{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.choice{
+    border: 4px solid rgb(27, 167, 27);
+    border-radius: 50%;
+    margin: 0 20px;
+    padding: 10px;
+    display:inline-block;
+    transition: all 0.3s ease;
+    
+}
+
+.choice:hover{
+    
+    cursor: pointer;
+  background: rgb(27, 167, 27);
+
+}
+.choice:active{
+    cursor: progress;
+
+}
+
+#action-message{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#games {
+    background: rgb(27, 167, 27);
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    color:white
+   
+
+
+  }
+
+#what {
+    text-align:center;
+
+}
+
+button {
+    
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    background: rgb(27, 167, 27);
+    font-size: 30px;
+    font-weight: bold;
+    padding-left:20px;
+    padding-right: 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+   
+}
+
+
+.green-glow {
+    border:  4px solid #4dcc7d;
+    box-shadow:  0 0 10px #31b43a;
+}
+
+.red-glow {
+    border:  4px solid #fc121b;
+    box-shadow:  0 0 10px #d01115; 
+}
+
+.blue-glow {
+    border:  4px solid rgb(100, 149, 237);
+    box-shadow:  0 0 10px rgb(94, 125, 184); 
+}
+
