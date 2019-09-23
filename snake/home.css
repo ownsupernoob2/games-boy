@@ -1,0 +1,39 @@
+body {
+    background: rgb(19, 19, 19);
+
+text-align: center;
+    justify-content: center;
+    color: white;
+    font-family: Papyrus, fantasy;
+    
+    
+  }
+
+  h2{
+    background-color:white;
+    color:rgb(56, 56, 56);
+    border: solid black 1px;
+    border-radius: 15px;
+}
+
+  a{
+      border:10px;
+    
+    text-decoration: none;
+    color:rgb(56, 56, 56);
+  }
+
+legend{
+    border: solid rgb(255, 255, 255) 1px;
+    border-radius: 15px;
+    color:rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+img{
+    border: solid black 1px;
+    border-radius: 30%;
+}
+
+  

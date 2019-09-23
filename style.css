@@ -9,7 +9,7 @@ html {
 
 
 body {
-    background-color:rgb(63, 62, 65) ;
+    background-color:rgb(92, 92, 92) ;
     font-family: 'Asap', sans-serif;
     background-size:cover;
     padding: 0;
@@ -50,14 +50,11 @@ body {
 
 }
 
-:hover#pargraph{
-  transition: 1s;
-  color:white;
-}
-
 
 #button1 {
+  position: relative;
   border-radius: 100%;
+  bottom:60px;
   font-size:30;
   background-color: rgb(245, 45, 22);
 
@@ -68,6 +65,7 @@ body {
   padding-bottom: 50px;
   padding-top:50px;
   box-shadow: 5px 5px 3px rgb(189, 9, 9);
+  
 
 
 
@@ -80,8 +78,6 @@ box-shadow: 1px -3px 20px rgb(172, 17, 17);
 #button1:active {
 box-shadow: 10px -3px 3px rgb(172, 17, 17);
 }
-
-
 
 
 #button {
@@ -206,49 +202,86 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
       
      box-shadow: 5px 5px rgba(45, 45, 45, 0.16);
     z-index: 99;
+    
 
    }
+
+   .dark-mode {
+     position: absolute;
+     text-align: right;
+     
+    
+     background:rgb(75, 73, 73);
+     background: #212121;
+     padding: 10px;
+     border-radius: 15px;
+     text-decoration: none;
+     color:white;
+     margin-left:90%; 
+    
+   }
+
+   .dark-mode-mobile {
+    position: absolute;
+    right:200px;
+    top:1px;
+    
+   
+    background:rgb(75, 73, 73);
+    background: #212121;
+    padding: 5px;
+    padding-left:40px;
+    padding-right:40px;
+    border-radius: 15px;
+    text-decoration: none;
+    color:white;
+    margin-left:50%; 
+    
+   
+  }
 
 
    .marging{
     padding-top: 15px;
     padding-left: 10px;
    }
-
-   .menu:hover{
-    transition: 1s;
-    background-color:rgb(71, 67, 67);
-    color:white;
+   a{
+     text-decoration: none;
+     color:white;
    }
+
+  
 
 
 
 /* ------------------------------------------ L O B B Y --------------------------------------------- */
 #welcome {
- 
+   
   padding-top:7px;
  
 
   position: absolute;
   border-radius: 15px;
   top: 100px;
-  height: 1030px;
+  height: 1999px;
   width: 100%;
   text-align: center;
   margin: 0 auto;
-
-  background-color: white
+  color:rgb(46, 46, 46);
+  background-color: rgb(255, 255, 255);
 
   
   
   
 }
 
-#welcome:hover{
-  transition: 1s;
-  color:white;
-  background-color:black;
+@media (max-width: 576px) {
+  #welcome{
+    top:293px;
+  }
 }
+
+
 
 
 
@@ -261,8 +294,13 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
 
 #game {
     position: absolute;
-    top: 1140px;
+    top: 2100px;
   
+  }
+  @media (max-width: 576px) {
+    #game{
+      top:2500px;
+    }
   }
 
   #games {
@@ -276,26 +314,22 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
   }
 
 
-  #games:hover{
-    transition: 1s;
-    color: #212121;
-    background-color:white;
-   
-
-  }
 
   
 
 
 
-   .border {
+  .border {
     display:inline-block;
     align-content: center;
     
     border-radius: 15px;
-   padding-left:2cm;
-   padding-top:20px;
+    padding-left:2cm;
+   padding-top:40px;
     margin:0;
+    margin-top:10px;
+
+
 
     
     
@@ -394,8 +428,7 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
     }
   
     .card:hover{
-      
-      transition: 1s;
+    
       
     box-shadow: 10px -3px 60px rgb(247, 241, 241);
     box-shadow: 0 4px px rgba(0,0,0,0.2);
@@ -598,12 +631,299 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
 
 
 
+::-webkit-input-placeholder{color: #777;}
+:-moz-placeholder { /* Firefox 18- */ color: #777;}
+::-moz-placeholder {  /* Firefox 19+ */ color: #777;}
+:-ms-input-placeholder {color: #777;}
+
+#cont{
+  position: absolute;
+  width: 60vw;
+	padding: 3em 11em;
+  margin: auto;
+  top: 2890px;
+  border: solid rgb(34, 34, 34) 2px;
+background:rgb(255, 255, 255);
+right:100px;
+}
+
+#cont h2{
+	text-align: center;
+	text-transform: uppercase;
+	color: rgb(0, 0, 0);
+}
+
+#contact input[type="text"],#contact input[type="email"], #contact textarea{
+	display: block;
+	padding: 10px;
+	margin: 10px auto;
+	width: 100%;
+	font-size: 18px;
+	color: #777;
+  border: 1px solid rgb(34, 34, 34);
+}
+
+#contact textarea{
+	font-size: 16px;
+}
+
+#contact textarea{
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 180px;
+	min-height: 180px;
+  resize: none;
+}
+
+#contact .send-button{
+	text-align: center;
+}
+
+#contact .send-button button[type="submit"]{
+	color: rgb(5, 5, 5);
+  background: #e9e9e9;
+  border:px 0;
+	font-size: 20px;
+	width: 100%;
+	padding: 10;
+	text-transform: uppercase;
+	transition: .5s all ease;
+  cursor: pointer;
+}
+
+#contact .send-button button[type="submit"]:hover{
+	background: #ffffff;
+}
+
+#contact .send-button button[type="submit"]:focus{
+	position: relative;
+	top: 2px;
+}
 
 
 
+@media screen and (max-width: 640px){
+	#cont{
+    position: relative;
+    width: 90%;
+    padding:5px;
+    top:3310px;
+    right:0;
+    
+    
+	}
+  #contact textarea{
+    max-width: 98%;
+    min-width: 98%;
+    min-height: 152px;
+    margin-right: 0;
+  }
 
+	#contact .right,#contact .left{
+		display: block;
+	}
 
+	#contact .right{
+		float: right;
+		width: 50%;
+	}
+  
+	#contact .left{
+		float: left;
+		width: 50%;
+	}
+	.cl{
+    clear: both;
+  }
+}
 
+  
+  
+  
+  
+  
+  
+  
+  
+    
+.style{
+  font-family: 'Lato', sans-serif;
+font-weight: 400;
+color: rgb(0, 0, 0)!important;
+font-size: 16px;
+
+} 
+  
+.mobile {
+  display:block;
+ 
+  color: rgb(0, 0, 0);
+  background:rgb(255, 255, 255);
+  font-size: 30px;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  text-align: right;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.521);
+
+ 
+    padding-bottom:30px;
+
+  
+  
+}
+@media (min-width: 576px) {
+  .mobile {
+    display: none;
+  }
+}
+.mobile-panel {
+  display: none;
+}
+.mobile-panel a {
+  text-decoration: none;
+}
+.mobile-toggle {
+  position: absolute;
+  opacity: 0;
+}
+.mobile-toggle:checked ~ .mobile-panel {
+  display: block;
+}
+.mobile-toggle:checked ~ .burger span:first-child {
+  display: none;
+}
+.mobile-toggle:checked ~ .burger span:last-child {
+  display: block;
+}
+
+.burger span:last-child {
+  display: none;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: none;
+}
+@media (min-width: 576px) {
+  .menu {
+    display: block;
+  }
+}
+.menu .mobile-menu {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 16px;
+  top: 0;
+  background-color: #27ae60;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 9999999;
+}
+.menu .mobile-menu__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.menu .mobile-menu__icon {
+  display: block;
+  position: relative;
+  background: white;
+  width: 90%;
+  height: 4px;
+  transition: 0.4s;
+}
+.menu .mobile-menu__icon::after, .menu .mobile-menu__icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 4px;
+  transition: 0.4s;
+}
+.menu .mobile-menu__icon::after {
+  top: 8px;
+}
+.menu .mobile-menu__icon::before {
+  top: -8px;
+}
+.menu .mobile-menu__container {
+  position: fixed;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 0;
+  opacity: 1;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+  overflow: hidden;
+  background-color: #27ae60;
+}
+.menu .mobile-menu__list {
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  list-style: none;
+  padding-left: 0;
+  margin-top: -50px;
+}
+.menu .mobile-menu__item {
+  font-size: 26px;
+  padding-bottom: 15px;
+}
+.menu .mobile-menu__link {
+  text-decoration: none;
+  color: #fff;
+}
+.menu .mobile-menu__checkbox {
+  display: none;
+}
+.menu .mobile-menu__checkbox:checked ~ .mobile-menu__nav {
+  opacity: 1;
+  transition-delay: 0s;
+}
+.menu .mobile-menu__checkbox:checked ~ .mobile-menu__container {
+  height: 100%;
+  transition-delay: 0s;
+}
+.menu .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon {
+  background: transparent;
+}
+.menu .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before, .menu .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
+  top: 0;
+}
+.menu .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.menu .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+  
+  
+  
+  
+        
+        
 
 
 
