@@ -41,23 +41,4 @@ html, body {
   #canvas{
     text-align: center;
   }
-  #arrow-up{
-    
-    background:rgb(56, 55, 55);
-    color:white;
  
-    
-    
-  }
-
-  #arrow-down{
-   
-    background:rgb(56, 55, 55);
-    color:white;
-   
-    
-    padding:0;
-    
-  }
-
-

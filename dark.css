@@ -225,7 +225,7 @@ html {
      
    .white-mode-mobile {
     position: absolute;
-    right:200px;
+    right:100px;
     top:1px;
     
    
@@ -264,7 +264,7 @@ html {
     position: absolute;
     border-radius: 15px;
     top: 100px;
-    height: 1999px;
+    height: 2100px;
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -278,6 +278,7 @@ html {
   @media (max-width: 576px) {
     #welcome{
       top:293px;
+      height: 2370px;
     }
   }
   
@@ -292,16 +293,22 @@ html {
   
   
   #game {
-      position: absolute;
-      top: 2100px;
-    
+    position: absolute;
+    top: 2300px;
+    background:rgb(46, 46, 46);
+    padding:20px;
+    border-radius:15px;
+    right: 200px;
+   border:solid rgb(255, 255, 255) 1px;
+  
+  }
+  @media (max-width: 576px) {
+    #game{
+      top:2700px;
+      right:110px;
+      
     }
-
-    @media (max-width: 576px) {
-      #game{
-        top:2500px;
-      }
-    }
+  }
     
 
   
@@ -499,19 +506,8 @@ html {
         
       }
   
-      .card3:first-of-type .banner{
-        background-image: url("images/avatar3.jpg");
-     
-        
-      }
-  
-  
-      .card4:first-of-type .banner{
-        background-image: url("images/avatar4.jpg");
-     
-        
-      }
-  
+    
+    
   
       
   
@@ -554,30 +550,8 @@ html {
       border: #212121 solid 5px;
     }
   
-    .avatar3{
-      height: 100px;
-      width: 100px;
-      margin: auto;
-      background-size: cover;
-      background-position: center;
-      background-color: #212121;
-      border-radius: 100%;
-      background-image: url("images/avatar3.jpg");
-      border: #212121 solid 5px;
-    }
-  
-    .avatar4{
-      height: 100px;
-      width: 100px;
-      margin: auto;
-      background-size: cover;
-      background-position: center;
-      background-color: #212121;
-            border-radius: 100%;
-      background-image: url("images/avatar4.jpg");
-      border: #212121 solid 5px;
-    }
-  
+   
+    
   
    
    
@@ -646,8 +620,9 @@ html {
   width: 60vw;
 	padding: 3em 11em;
   margin: auto;
-  top: 2600px;
-  border: soslid rgb(255, 255, 255) 2px;
+  top: 2990px;
+  border: solid rgb(255, 255, 255) 2px;
+  border-radius: 15px;
 background:rgb(51, 51, 51);
 right:100px;
 }
@@ -715,7 +690,7 @@ right:100px;
     position: relative;
     width: 90%;
     padding:5px;
-    top:3310px;
+    top:3970px;
     right:0;
     
     
