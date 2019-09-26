@@ -685,16 +685,17 @@ right:100px;
 
 
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 1025px){
 	#cont{
     position: relative;
     width: 90%;
     padding:5px;
-    top:3970px;
+    top:3870px;
     right:0;
     
     
-	}
+  }
+
   
   #contact textarea{
     max-width: 98%;
@@ -749,7 +750,7 @@ font-size: 16px;
   
   
 }
-@media (min-width: 576px) {
+@media (min-width: 798px) {
   .mobile {
     display: none;
   }
@@ -786,7 +787,7 @@ font-size: 16px;
 .menu {
   display: none;
 }
-@media (min-width: 576px) {
+@media (min-width: 798px) {
   .menu {
     display: block;
   }
