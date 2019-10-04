@@ -333,7 +333,7 @@ html {
       align-content: center;
       
       border-radius: 15px;
-     padding-left:2cm;
+     padding-left:1cm;
      padding-top:40px;
       margin:0;
       color:white;
@@ -506,6 +506,13 @@ html {
         
       }
   
+      .card3:first-of-type .banner{
+        background-image: url("hangman/DONT-TOUCH/hangman.png");
+     
+        
+      }
+  
+    
     
     
   
@@ -550,6 +557,20 @@ html {
       border: #212121 solid 5px;
     }
   
+     
+    .avatar3{
+      height: 100px;
+      width: 100px;
+      margin: auto;
+      background-size: cover;
+      background-position: center;
+      background-color: #212121;
+            border-radius: 100%;
+      background-image: url("hangman/DONT-TOUCH/hangman.png");
+      border: #212121 solid 5px;
+    }
+  
+   
    
     
   
@@ -690,7 +711,7 @@ right:100px;
     position: relative;
     width: 90%;
     padding:5px;
-    top:3870px;
+    top:4370px;
     right:0;
     
     

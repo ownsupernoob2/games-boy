@@ -332,7 +332,7 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
     align-content: center;
     
     border-radius: 15px;
-    padding-left:2cm;
+    padding-left:1cm;
    padding-top:40px;
     margin:0;
     margin-top:10px;
@@ -471,6 +471,8 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
       box-shadow: 0 4px px rgba(0,0,0,0.2);
   
       }
+
+
   
   .banner{
     height: 100px;
@@ -501,6 +503,14 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
    
       
     }
+
+    .card3:first-of-type .banner{
+      background-image: url("hangman/DONT-TOUCH/hangman.png");
+   
+      
+    }
+
+  
 
   
 
@@ -542,6 +552,17 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
     background-color: #F1F1F1;
     border-radius: 100%;
     background-image: url("images/avatar2.png");
+    border: #212121 solid 5px;
+  }
+  .avatar3{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #F1F1F1;
+    border-radius: 100%;
+    background-image: url("hangman/DONT-TOUCH/hangman.png");
     border: #212121 solid 5px;
   }
 
@@ -680,7 +701,7 @@ right:100px;
     position: relative;
     width: 90%;
     padding:5px;
-    top:3870px;
+    top:4370px;
     right:0;
     
     
