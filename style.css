@@ -263,7 +263,7 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
   position: absolute;
   border-radius: 15px;
   top: 100px;
-  height: 2100px;
+  height: 2900px;
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -278,7 +278,7 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
 @media (max-width: 576px) {
   #welcome{
     top:293px;
-    height: 2370px;
+    height: 3270px;
   }
 }
 
@@ -295,19 +295,21 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
 
 #game {
     position: absolute;
-    top: 2300px;
+    top: 3100px;
     background:rgb(199, 199, 199);
     padding:20px;
     border-radius:15px;
-   right: 200px;
+   right: 260px;
    border:solid rgb(7, 7, 7) 1px;
    padding-left: 10px;
   
   }
   @media (max-width: 576px) {
     #game{
-      top:2700px;
+
+      top:3600px;
       right:110px;
+      
     }
   }
 
@@ -635,7 +637,7 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
   width: 60vw;
 	padding: 3em 11em;
   margin: auto;
-  top: 2990px;
+  top: 4200px;
   border: solid rgb(34, 34, 34) 2px;
   border-radius: 15px;
 background:rgb(255, 255, 255);
@@ -701,7 +703,7 @@ right:100px;
     position: relative;
     width: 90%;
     padding:5px;
-    top:4370px;
+    top:5430px;
     right:0;
     
     

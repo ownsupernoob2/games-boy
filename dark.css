@@ -264,7 +264,7 @@ html {
     position: absolute;
     border-radius: 15px;
     top: 100px;
-    height: 2100px;
+    height: 2900px;
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -278,7 +278,7 @@ html {
   @media (max-width: 576px) {
     #welcome{
       top:293px;
-      height: 2370px;
+      height: 3270px;
     }
   }
   
@@ -294,17 +294,17 @@ html {
   
   #game {
     position: absolute;
-    top: 2300px;
+    top: 3100px;
     background:rgb(46, 46, 46);
     padding:20px;
     border-radius:15px;
-    right: 200px;
+    right: 260px;
    border:solid rgb(255, 255, 255) 1px;
   
   }
   @media (max-width: 576px) {
     #game{
-      top:2700px;
+      top:3600px;
       right:110px;
       
     }
@@ -641,7 +641,7 @@ html {
   width: 60vw;
 	padding: 3em 11em;
   margin: auto;
-  top: 2990px;
+  top: 4200px;
   border: solid rgb(255, 255, 255) 2px;
   border-radius: 15px;
 background:rgb(51, 51, 51);
@@ -711,7 +711,7 @@ right:100px;
     position: relative;
     width: 90%;
     padding:5px;
-    top:4370px;
+    top:5430px;
     right:0;
     
     
