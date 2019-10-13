@@ -267,7 +267,7 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
   position: absolute;
   border-radius: 15px;
   top: 100px;
-  height: 2900px;
+  height: 3000px;
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -282,7 +282,7 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
 @media (max-width: 576px) {
   #welcome{
     top:293px;
-    height: 3270px;
+    height: 3470px;
   }
 }
 
@@ -299,7 +299,7 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
 
 #game {
     position: absolute;
-    top: 3100px;
+    top: 3300px;
     background:rgb(199, 199, 199);
     padding:20px;
     border-radius:15px;
@@ -656,7 +656,7 @@ border-radius: 100%;
   width: 60vw;
 	padding: 3em 11em;
   margin: auto;
-  top: 4200px;
+  top: 4400px;
   border: solid rgb(34, 34, 34) 2px;
   border-radius: 15px;
 background:rgb(255, 255, 255);
