@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="container flex-wrapper flex-column flex-center">
+
+    <div id="header">Tic Tac Toe</div>
+
+    <div class="dropdown-nav flex-wrapper flex-center">
+     
+      <label for="player1">Player 1:</label><br><br>
+      <select name="player1" class="selection" id="x-var" onchange="playerOneSelect(this.options[selectedIndex].value)">
+        <option value="x">X</option>
+        <option value="sq">&#x25A2;</option>
+      </select>
+      
+      <label for="player2">Player 2:</label><br>
+      <select name="player2" class="selection" id="o-var" onchange="playerTwoSelect(this.options[selectedIndex].value)">
+        <option value="o">O</option>
+        <option value="sean">&#9651;</option>
+      </select>
+    </div>
+
+        <div class="board">
+      <div class="cell flex-wrapper">
+        <div class="box" id="s1"></div>
+        <div class="box" id="s2"></div>
+        <div class="box" id="s3"></div>
+      </div>
+
+      <div class="cell flex-wrapper">
+        <div class="box" id="s4"></div>
+        <div class="box" id="s5"></div>
+        <div class="box" id="s6"></div>
+      </div>
+
+      <div class="cell flex-wrapper">
+        <div class="box" id="s7"></div>
+        <div class="box" id="s8"></div>
+        <div class="box" id="s9"></div>
+      </div>
+    </div>
+
+    
+    <div id="modal" class="modal flex-wrapper flex-column">
+      <div class="content"></div><br>
+
+      <div id="player1-score" class="score"></div><br>
+      <div id="player2-score" class="score"></div><br>
+      <button class="btn-x" onclick="closeModal()">Close</button>
+    </div>
+
+    <div id="notify-modal" class="notify-modal flex-wrapper flex-wrap">
+      <div class="content"></div>
+    </div>
+
+
+    <div class="flex-wrapper actions flex-center">
+      <button onclick="undo()" id="undo">
+        <span class="fas fa-undo"></span>
+      </button>
+      <button onclick="restartGame()" id="reset">Restart Game</button>
+  
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+
+</html>

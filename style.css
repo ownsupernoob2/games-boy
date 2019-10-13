@@ -220,6 +220,10 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
      margin-left:90%; 
     
    }
+   .title{
+    text-align: center;
+    color:rgb(7, 7, 7);
+  }
 
    .dark-mode-mobile {
     position: absolute;
@@ -299,9 +303,9 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
     background:rgb(199, 199, 199);
     padding:20px;
     border-radius:15px;
-   right: 260px;
-   border:solid rgb(7, 7, 7) 1px;
-   padding-left: 10px;
+    right: 89px;
+    left:1cm;
+    border: 1px solid black;
   
   }
   @media (max-width: 576px) {
@@ -512,8 +516,14 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
       
     }
 
-  
+    .card4:first-of-type .banner{
+      background-image: url("Tictactoe/Tic.jpg");
+   
+    
+    }
 
+  
+  
   
 
     
@@ -527,8 +537,8 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
     margin: auto;
     background-size: cover;
     background-position: center;
-    background-color: #F1F1F1;
-    border-radius: 100%;
+    background-color:  #212121;
+border-radius: 100%;
     background-image: url("images/avatar.jpg");
     border: #212121 solid 5px;
   }
@@ -539,8 +549,8 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
     margin: auto;
     background-size: cover;
     background-position: center;
-    background-color: #F1F1F1;
-    border-radius: 100%;
+    background-color: #212121;
+          border-radius: 100%;
     background-image: url("images/avatar1.jpg");
     border: #212121 solid 5px;
   }
@@ -551,27 +561,37 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
     margin: auto;
     background-size: cover;
     background-position: center;
-    background-color: #F1F1F1;
-    border-radius: 100%;
+    background-color: #212121;
+          border-radius: 100%;
     background-image: url("images/avatar2.png");
     border: #212121 solid 5px;
   }
+
+   
   .avatar3{
     height: 100px;
     width: 100px;
     margin: auto;
     background-size: cover;
     background-position: center;
-    background-color: #F1F1F1;
-    border-radius: 100%;
+    background-color: #212121;
+          border-radius: 100%;
     background-image: url("hangman/DONT-TOUCH/hangman.png");
     border: #212121 solid 5px;
   }
 
-  
+  .avatar4{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #212121;
+          border-radius: 100%;
+    background-image: url("Tictactoe/Tic.jpg");
+    border: #212121 solid 5px;
+  }
 
- 
- 
   
   h3, .a, .i{
     font-family: 'Roboto', sans-serif;
@@ -703,7 +723,7 @@ right:100px;
     position: relative;
     width: 90%;
     padding:5px;
-    top:5430px;
+    top:5730px;
     right:0;
     
     
