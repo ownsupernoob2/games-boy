@@ -297,58 +297,64 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
 
 
 
+ 
 #game {
-    position: absolute;
-    top: 3300px;
-    background:rgb(199, 199, 199);
-    padding:20px;
-    border-radius:15px;
-    right: 89px;
-    left:1cm;
-    border: 1px solid black;
+  position: absolute;
+  top: 3300px;
+  background:rgb(216, 216, 216);
+  padding:20px;
+  border-radius:15px;
+  right: 89px;
+  left:1cm;
   
-  }
+ border:solid rgb(0, 0, 0) 1px;
+
+}
   @media (max-width: 576px) {
     #game{
-
-      top:3600px;
-      right:110px;
+      top:3800px;
+      right:68px;
+     
+      
       
     }
   }
-
-  #games {
-    background: #212121;
-    padding: 10px;
-    border-radius: 15px;
-    text-decoration: none;
-    color:white
     
-
-  }
-
-
 
   
-
-
-
-  .border {
-    display:inline-block;
-    align-content: center;
+    #games {
+      background: #222222;
+      padding: 20px;
+      border-radius: 15px;
+      text-decoration: none;
+      
+      color:rgb(255, 255, 255);
+  
+    }
+  
+  
+  
     
-    border-radius: 15px;
-    padding-left:1cm;
-   padding-top:40px;
-    margin:0;
-    margin-top:10px;
-
-
-
+  
+  
+  
+     .border {
+      display:inline-block;
+      align-content: center;
+      
+      border-radius: 15px;
     
-    
-    
-  }
+     padding-top:40px;
+   
+      margin:0;
+     
+  
+  
+      
+      
+      
+    }
+  
 
   
   
@@ -722,7 +728,7 @@ right:100px;
     position: relative;
     width: 90%;
     padding:5px;
-    top:5730px;
+    top:5930px;
     right:0;
     
     

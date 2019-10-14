@@ -311,7 +311,9 @@ html {
   @media (max-width: 576px) {
     #game{
       top:3800px;
-      right:110px;
+      right:68px;
+     
+      
       
     }
   }
@@ -320,7 +322,7 @@ html {
   
     #games {
       background: #f8f8f8;
-      padding: 10px;
+      padding: 20px;
       border-radius: 15px;
       text-decoration: none;
       
@@ -341,7 +343,7 @@ html {
       border-radius: 15px;
     
      padding-top:40px;
-     padding-right: 40px;
+   
       margin:0;
       color:white;
   
@@ -679,12 +681,7 @@ right:100px;
 }
 
   
-@media screen and (max-width: 1025px){
-	#bye{
-   display:none;
-    
-  }
-}
+
 
 #cont h2{
 	text-align: center;
