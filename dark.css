@@ -211,7 +211,7 @@ html {
   
      }
   
-     .white-mode {
+     .blue-mode {
        position: absolute;
        text-align: right;
        padding-right:3px;
@@ -220,27 +220,53 @@ html {
        padding: 10px;
        border-radius: 15px;
        text-decoration: none;
-       color:rgb(0, 0, 0);
+       color:rgb(19, 19, 19);
        margin-left:90%; 
       
        
      }
 
+     #social{
+      margin-top:1cm;
+     }
+
+    .go-social{
+      margin-left:10px;
+      border-radius: 100%;
+      
+    }
+
+    .good-bye{
+      color:white;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
      
-   .white-mode-mobile {
+    }
+
+    
+
+  
+    .go-social:hover{
+      transition: 1.0s;
+     width:40px;
+     border:solid rgb(255, 255, 255) 4px;
+     
+    }
+
+     
+   .blue-mode-mobile {
     position: absolute;
     right:100px;
     top:1px;
     
    
-    background:rgb(247, 247, 247);
-    background: #dbdbdb;
+    background:rgb(252, 252, 252);
+    
     padding: 5px;
     padding-left:40px;
     padding-right:40px;
     border-radius: 15px;
     text-decoration: none;
-    color:rgb(14, 14, 14);
+    color:rgb(31, 31, 31);
     margin-left:50%; 
     
    

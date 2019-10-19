@@ -185,7 +185,6 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
   
 
   
-  
    .menu{
       position: fixed;
       background-color:white;
@@ -241,6 +240,32 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
     color:white;
     margin-left:50%; 
     
+   
+  }
+
+
+
+  #social{
+    margin-top:1cm;
+   }
+
+  .go-social{
+    margin-left:10px;
+    border-radius: 100%;
+ 
+    
+  }
+  .good-bye{
+    color:rgb(0, 0, 0);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
+  }
+
+
+  .go-social:hover{
+    transition: 1.0s;
+   width:40px;
+   border:solid rgb(0, 0, 0) 3px;
    
   }
 
