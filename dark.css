@@ -50,7 +50,7 @@ html {
   
   
   
-  #button1 {
+  .button1 {
     position: relative;
     border-radius: 100%;
     bottom:60px;
@@ -64,27 +64,28 @@ html {
     padding-bottom: 50px;
     padding-top:50px;
     box-shadow: 5px 5px 3px rgb(189, 9, 9);
+
     
   
   
   
   }
-  #button1:hover {
+  .button1:hover {
   transition: 1s;
   box-shadow: 1px -3px 20px rgb(172, 17, 17);
   }
   
-  #button1:active {
+  .button1:active {
   box-shadow: 10px -3px 3px rgb(172, 17, 17);
   }
   
   
   
   
-  #button {
+  .button {
       border-radius: 100%;
       font-size:30;
-      background-color: rgb(245, 45, 22);
+      background-color: rgb(26, 26, 26);
   
       padding:30px;
       
@@ -92,18 +93,20 @@ html {
       color:white;
       padding-bottom: 50px;
       padding-top:50px;
-      box-shadow: 5px 5px 3px rgb(189, 9, 9);
-    
+      
+      
+      box-shadow: 2px -3px 7px rgb(255, 255, 255);
+
   
   
   }
-   #button:hover {
+   .button:hover {
     transition: 1s;
-    box-shadow: 1px -3px 20px rgb(172, 17, 17);
+    box-shadow: 1px -3px 20px rgb(255, 255, 255);
   }
   
-  #button:active {
-    box-shadow: 10px -3px 3px rgb(172, 17, 17);
+  .button:active {
+    box-shadow: 10px -3px 3px rgb(53, 53, 53);
   }
   
   
@@ -213,14 +216,15 @@ html {
   
      .blue-mode {
        position: absolute;
+       color:rgb(255, 255, 255);
        text-align: right;
        padding-right:3px;
-       background:rgb(255, 255, 255);
+       background:cornflowerblue;
        
        padding: 10px;
        border-radius: 15px;
        text-decoration: none;
-       color:rgb(19, 19, 19);
+     
        margin-left:90%; 
       
        
@@ -255,14 +259,14 @@ html {
     top:1px;
     
    
-    background:rgb(252, 252, 252);
+    background:cornflowerblue;
     
     padding: 5px;
     padding-left:40px;
     padding-right:40px;
     border-radius: 15px;
     text-decoration: none;
-    color:rgb(31, 31, 31);
+    color:lightseagreen;
     margin-left:50%; 
     
    
@@ -290,7 +294,7 @@ html {
     position: absolute;
     border-radius: 15px;
     top: 100px;
-    height: 3000px;
+    height: 3600px;
     width: 100%;
     text-align: center;
     margin: 0 auto;
@@ -301,10 +305,10 @@ html {
     
     
   }
-  @media (max-width: 576px) {
+  @media (max-width: 805px) {
     #welcome{
       top:293px;
-      height: 3370px;
+      height: 3859px;
     }
   }
   
@@ -320,7 +324,7 @@ html {
   
   #game {
     position: absolute;
-    top: 3300px;
+    top: 3800px;
     background:rgb(46, 46, 46);
     padding:20px;
     border-radius:15px;
@@ -330,15 +334,19 @@ html {
    border:solid rgb(255, 255, 255) 1px;
   
   }
-  @media (max-width: 576px) {
+ 
+
+  @media (max-width: 768px) {
     #game{
-      top:3800px;
+      top:4200px;
       right:68px;
      
       
       
     }
   }
+
+    
     
 
   
@@ -440,6 +448,33 @@ html {
       transition: .1s ease-in-out;
    
     }
+
+    .card5{
+      width: 200px; 
+      overflow: hidden;
+      background-color: #212121;
+       
+      border-radius: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      text-align: center;
+      -webkit-transition: .1s ease-in-out;
+      transition: .1s ease-in-out;
+   
+    }
+
+    .card6{
+      width: 200px; 
+      overflow: hidden;
+      background-color: #212121;
+       
+      border-radius: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      text-align: center;
+      -webkit-transition: .1s ease-in-out;
+      transition: .1s ease-in-out;
+   
+    }
+  
   
       .card:first-of-type{
         margin-right: 25px;
@@ -464,11 +499,21 @@ html {
         margin-right: 25px;
         
       }
+
+      .card5:first-of-type{
+        margin-right: 25px;
+        
+      }
+
+      .card6:first-of-type{
+        margin-right: 25px;
+        
+      }
     
       .card:hover{
         
       
-        box-shadow: 10px -5px 90px  #1a1919;
+        box-shadow: 10px -5px 90px  #494949;
         
         box-shadow: 0 4px px rgba(0,0,0,0.2);
   
@@ -476,7 +521,7 @@ html {
       .card1:hover{
         
         
-        box-shadow: 10px -5px 90px  #1a1919;
+        box-shadow: 10px -5px 90px  #494949;
         
         box-shadow: 0 4px px rgba(0,0,0,0.2);
   
@@ -485,7 +530,7 @@ html {
       .card2:hover{
         
        
-        box-shadow: 10px -5px 90px  #1a1919;
+        box-shadow: 10px -5px 90px  #494949;
         
         box-shadow: 0 4px px rgba(0,0,0,0.2);
   
@@ -493,7 +538,7 @@ html {
   
       .card3:hover{
         
-        box-shadow: 10px -5px 90px  #1a1919;
+        box-shadow: 10px -5px 90px  #494949;
         
         box-shadow: 0 4px px rgba(0,0,0,0.2);
   
@@ -501,10 +546,25 @@ html {
   
       .card4:hover{
         
-        box-shadow: 10px -5px 90px  #1a1919;
+        box-shadow: 10px -5px 90px  #494949;
         box-shadow: 0 4px px rgba(0,0,0,0.2);
     
         }
+
+        .card5:hover{
+        
+          box-shadow: 10px -5px 90px  #494949;
+          box-shadow: 0 4px px rgba(0,0,0,0.2);
+      
+          }
+
+          .card6:hover{
+        
+            box-shadow: 10px -5px 90px  #494949;
+            box-shadow: 0 4px px rgba(0,0,0,0.2);
+        
+            }
+      
     
     .banner{
       height: 100px;
@@ -548,6 +608,18 @@ html {
      
         
       }
+
+      .card5:first-of-type .banner{
+        background-image: url("images/header.jpg");
+     
+        
+      }
+
+      .card6:first-of-type .banner{
+        background-image: url("images/avatar3.jpg");
+     
+        
+      }
   
     
     
@@ -580,9 +652,9 @@ html {
       margin: auto;
       background-size: cover;
       background-position: center;
-      background-color: #212121;
-            border-radius: 100%;
-      background-image: url("images/avatar1.jpg");
+      background-color: rgb(58, 58, 59);
+      border-radius: 100%;
+background-image: url("../snake/Snake-game-v2.0/img/Logo.png");
       border: #212121 solid 5px;
     }
   
@@ -622,6 +694,35 @@ html {
       background-image: url("Tictactoe/Tic.jpg");
       border: #212121 solid 5px;
     }
+
+    
+    .avatar5{
+      height: 100px;
+      width: 100px;
+      margin: auto;
+      background-size: cover;
+      background-position: center;
+      background-color: #212121;
+            border-radius: 100%;
+      background-image: url("images/header.jpg");
+      border: #212121 solid 5px;
+    }
+
+    
+    .avatar6{
+      height: 100px;
+      width: 100px;
+      margin: auto;
+      background-size: cover;
+      background-position: center;
+      background-color: #212121;
+            border-radius: 100%;
+      background-image: url("images/avatar3.jpg");
+      border: #212121 solid 5px;
+    }
+  
+   
+   
   
    
    
@@ -695,7 +796,7 @@ html {
   width: 60vw;
 	padding: 3em 11em;
   margin: auto;
-  top: 4400px;
+  top: 5000px;
   border: solid rgb(255, 255, 255) 2px;
   border-radius: 15px;
 background:rgb(51, 51, 51);
@@ -765,7 +866,7 @@ right:100px;
     position: relative;
     width: 90%;
     padding:5px;
-    top:5930px;
+    top:7390px;
     right:0;
     
     
@@ -796,6 +897,11 @@ right:100px;
     clear: both;
   }
 }
+
+
+  
+  
+  
 
   
 .style{

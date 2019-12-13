@@ -1,114 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
 
-@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
 
-
 body {
-  background-color:rgb(114, 114, 114);
-  background-size: cover;
-  font-family: 'Asap', sans-serif;
+    background-color: #292c34;
 }
 
 header {
-    background: rgb(36, 35, 35);
+    background: white;
     padding: 20px;
 }
 
-
-
-
-
 header > h1 {
-   
-   color:rgb(255, 255, 255);
-   text-align: center;
-    
+    color: #25272E;
+    text-align: center;
+    font-family: Asap, sans-serif;
 }
 
-.score-board{
+.score-board {
     margin: 20px auto;
-    border: 3px solid rgb(8, 8, 8);
+    border: 3px solid white;
     border-radius: 4px;
     text-align: center;
     width: 200px;
-    color:rgb(0, 0, 0);
+    color: white;
     font-size: 46px;
     padding: 15px 20px;
-  
+    font-family: Asap, sans-serif;
     position: relative;
-
 }
 
-.badge{
-    background: rgb(110, 106, 106);
-    color: rgb(255, 255, 255);
-    font-size:14px;
-    padding: 2px 18px;
-    
+.badge {
+    background: #E2584D;
+    color: white;
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: Asap, sans-serif;
 }
-
 
 #user-label {
-  position: absolute;
+    position: absolute;
     top: 30px;
     left: -25px;
-    border-radius: 15px;
-
 }
+
 #computer-label {
     position: absolute;
-      top: 30px;
-      right: -30px;
-      border-radius: 15px;
-  }
-
-.result{
-    font-size:40px;
-    color:rgb(0, 0, 0);
+    top: 30px;
+    right: -30px;
 }
+
+.result {
+    font-size: 40px;
+    color: white;
+
+}
+
 .result > p {
     text-align: center;
+    font-family: Asap, sans-serif;
     font-weight: bold;
 }
 
-.choices{
+.choices {
     margin-top: 50px;
     text-align: center;
 }
 
-.choice{
-    border: 4px solid rgb(0, 0, 0);
+.choice {
+    border: 4px solid white;
     border-radius: 50%;
-    margin: 0 20px;
+    display: inline-block;
     padding: 10px;
-    display:inline-block;
+    margin: 0 20px;
     transition: all 0.3s ease;
-    
 }
 
-.choice:hover{
-    
+.choice > img {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    filter: invert(100%)
+}
+.choice:hover {
     cursor: pointer;
-  background: rgb(111, 114, 111);
-
-}
-.choice:active{
-    cursor: progress;
-
+    background: #24272E;
 }
 
 #action-message{
+    margin-top: 20px;
     text-align: center;
     color: white;
+    font-family: Asap, sans-serif;
     font-weight: bold;
     font-size: 20px;
-    margin-top: 20px;
 }
+
+.green-glow {
+    border : 4px solid #4dcc7d;
+    box-shadow: 0 0 10px #31b43a;
+}
+
+.red-glow {
+    border : 4px solid #fc121b;
+    box-shadow: 0 0 10px #d01115;
+}
+
+.gray-glow {
+    border : 4px solid #464647;
+    box-shadow: 0 0 10px #25292B;
+}
+
 
 #games {
     background: rgb(70, 67, 67);
@@ -132,30 +138,15 @@ button {
     margin-top: 40px;
     border: none;
     border-radius: 4px;
-    background: rgb(105, 109, 105);
+    background: rgb(255, 255, 255);
     font-size: 30px;
     font-weight: bold;
     padding-left:20px;
     padding-right: 20px;
-    color: rgb(255, 255, 255);
+    color: rgb(70, 70, 70);
     cursor: pointer;
-    border: solid black 1px;
+    border: solid rgb(49, 49, 49) 1px;
    
 }
 
-
-.green-glow {
-    border:  4px solid #4dcc7d;
-    box-shadow:  0 0 10px #31b43a;
-}
-
-.red-glow {
-    border:  4px solid #fc121b;
-    box-shadow:  0 0 10px #d01115; 
-}
-
-.blue-glow {
-    border:  4px solid rgb(100, 149, 237);
-    box-shadow:  0 0 10px rgb(94, 125, 184); 
-}
 

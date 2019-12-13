@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0"> <!-- Prevents zooming -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Snake-HTML5</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <body>
+            <canvas id="myCanvas"></canvas>
+            
+            <div class="toast" id="g_o_t">Game Over.</div>
+        
+            <!-- Menu -->
+            <div class="main_menu" id="menu">
+                <div class="game_title">
+                    <p>Classic Snake</p>
+                </div>
+                <div class="main_menu_elem play" id="play">
+                    <button type="button" autofocus>Play</button>
+                </div>
+                <div class="main_menu_elem sound" id="sound">
+                    <button type="toggle" id="toggle_sound" value="on">Sound: On</button>
+                </div>
+                <div class="main_menu_elem level">
+                    <button type="button" id="level" value="1">Level: Easy</button>
+            
+                </div>
+            </div>
+        
+         
+                <div class="back_to_menu">
+                    <button type="button" id="back_about">
+                        <img src="images/back.png">
+                    </button>
+                </div>
+            </div>
+        
+            <!-- Show core after game ove -->
+            <div class="game_over" id="game_over">
+                <p class="heading">Score</p>
+                <p class="score" id="_score">0</p>
+                <div class="back_to_menu">
+                    <button type="button" id="back_score">
+                        <img src="images/back.png">
+                    </button>
+                </div>
+            </div>
+        </body>
+        <script src="main.js"></script>
+</head>
+</html>

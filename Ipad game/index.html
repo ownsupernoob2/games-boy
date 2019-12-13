@@ -1,0 +1,449 @@
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>touch Snakes</title>
+	<style>
+	canvas {
+		position: absolute;
+		top: 0;
+		/*bottom: 0;*/
+		left: 0;
+		/*right: 0;*/
+		background-color: rgba(200, 200, 250, 0.5);
+		z-index: 10;
+	}
+	.back {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		color: rgb(241, 241, 241);
+		text-align: center;
+	}
+	.compatibility {
+		color: red;
+		position: absolute;
+		z-index: 50;
+	}
+	.color0 {
+		color: hsl(0, 50%, 50%);
+	}
+	.color1 {
+		color: hsl(19, 50%, 50%);
+	}
+	.color2 {
+		color: hsl(56, 52%, 48%);
+	}
+	.color3 {
+		color: hsl(118, 50%, 50%);
+	}
+	.color4 {
+		color: hsl(204, 50%, 50%);
+	}
+	.color5 {
+		color: hsl(258, 50%, 50%);
+	}
+	.color6 {
+		color: hsl(298, 50%, 50%);
+	}
+	.color7 {
+        color: hsl(0, 0%, 100%);
+	}
+	.color8 {
+		color: hsl(0, 1%, 60%);
+	}
+	.color9 {
+	
+        color: hsl(0, 0%, 0%);
+	}
+	#background {
+		z-index: 5;
+		font-size: 30em;
+		background-color: rgb(99, 99, 99);
+	}
+	#back-comment {
+		z-index: 7;
+		font-size: 5em;
+	}
+	</style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div class="compatibility">I am sorry.<br>There is an issue with your device.</div>
+<div id="background" class="back"></div>
+<div id="back-comment" class="back"></div>
+
+<script>
+'use strict';
+const _2PI = 2 * Math.PI;
+const w = 5;
+const initCountDown = 3;
+const canvas = document.getElementById('canvas');
+const comment = document.getElementById('back-comment');
+const back = document.getElementById('background');
+const ctx = canvas.getContext('2d');
+const id = [];
+let lastPoints = [];
+let lastSegments = [];
+let touchInfo = [];
+let currentMode = 0; /* 0 → start  1 → battle  2 → Ending 3 → End */
+function isInSegment(x, x1, x2) {
+	return x >= x1 && x <= x2;
+}
+function isCut(segment1, segment2) {
+	const [a1, b1, x11, x12, y11, y12] = segment1;
+	const [a2, b2, x21, x22, y21, y22] = segment2;
+	let x, y;
+	if (!Number.isFinite(a1)) {
+		x = b1;
+		y = a2 * x + b2;
+	} else
+	if (!Number.isFinite(a2)) {
+		x = b2;
+		y = a1 * x + b1;
+	} else {
+		if (a1 === a2){
+			return false;
+		}
+		x = (b2 - b1) / (a1 - a2);
+		y = a1 * x + b1;
+	}
+	if (!Number.isFinite(y)) {
+		return false;
+	}
+	return isInSegment(x, x11, x12) && isInSegment(x, x21, x22)
+		&& isInSegment(y, y11, y12) && isInSegment(y, y21, y22);
+}
+function buildLine(coords, lastCoords) {
+	const [x1, y1] = coords, [x2, y2] = lastCoords;
+	const a = (y1 - y2) / (x1 - x2);
+	const b = Number.isFinite(a) ? y1 - a * x1 : x1;
+	return [a, b, Math.min(x1, x2), Math.max(x1, x2), Math.min(y1, y2), Math.max(y1, y2)];
+}
+function isOk(info, coords, lastCoords) {
+	// check if there is intersection with any other snake
+	const line = buildLine(coords, lastCoords);
+	const currentSegments = lastSegments[info.identifier];
+	for (let segments of lastSegments) {
+		if (segments === currentSegments) {
+			// comment.textContent += 'ok';
+			segments = currentSegments.slice(2);
+		}
+		for (let segment of segments) {
+			if (isCut(segment, line)) {
+				return false;
+			}
+		}
+	}
+	currentSegments.unshift(line);
+	return line;
+}
+function drawPoint(identifier, coords = null) {
+	const info = touchInfo[identifier];
+	coords || (coords = lastPoints[identifier][0]);
+	const lostC = lastPoints[identifier][0] || coords;
+	const color = `hsl(${(identifier*113)%380}, 50%, 50%)`;
+	ctx.save();
+	ctx.globalCompositeOperation = 'destination-out';
+	ctx.beginPath();
+	ctx.ellipse(...lostC, w*16, w*16, 0, 0, _2PI);
+	ctx.fill();
+	ctx.restore();
+	if (info.isActive) {
+		ctx.save();
+		ctx.fillStyle = color;
+		ctx.beginPath();
+		ctx.ellipse(...coords, w*15, w*15, 0, 0, _2PI);
+		ctx.fill();
+		ctx.restore();
+	}
+	lastPoints[identifier] = [coords];
+}
+function drawSnake(identifier, active = 50) {
+	const isLived = active > 0 ? 50 : 30;
+	const color = `hsl(${(identifier*113)%380}, ${active}%, ${isLived}%)`;
+	const points = lastPoints[identifier] || [];
+	let lastPoint = points[0];
+	ctx.save();
+	ctx.fillStyle = color;
+	ctx.strokeStyle = color;
+	ctx.lineWidth = w*2;
+	for (let point of points) {
+		ctx.beginPath();
+		ctx.moveTo(...lastPoint);
+		ctx.lineTo(...point);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.ellipse(...point, w, w, 0, 0, _2PI);
+		ctx.fill();
+		lastPoint = point;
+	}
+	ctx.restore();
+}
+function getDistance(coord1, coord2) {
+	if (!coord1 || !coord2) {
+		return Infinity;
+	}
+	return Math.sqrt(Math.pow(coord1[0] - coord2[0], 2) + Math.pow(coord1[1] - coord2[1], 2));
+}
+function addDrawSnake(identifier, coords) {
+	const info = touchInfo[identifier];
+	const currentLength = info.currentLength;
+	const color = `hsl(${(identifier*113)%380}, 50%, 50%)`;
+	const points = lastPoints[identifier] || [];
+	const lastCoords =  points[0] || coords;
+	let line;
+	let distance = 0;
+	if (lastCoords !== coords) {
+		distance = getDistance(coords, lastCoords);
+		if (distance < 3 * w || !Number.isFinite(distance)) {
+			return;
+		}
+		info.distance += distance;
+		
+		if (info.distance > 1000) {
+			info.distance -= 1000;
+			info.currentLength++;
+		}
+	}
+	info.life = 50;
+	clearTimeout(info.timer);
+	info.timer = setTimeout(inactive, 1000, info.identifier);
+	ctx.save();
+	ctx.lineWidth = w*2;
+	// erase end
+	if (points.length > currentLength) {
+		ctx.save();
+		const lostC = points.pop();
+		const lastC = points[points.length -1];
+		lastSegments[identifier].pop();
+		ctx.globalCompositeOperation = 'destination-out';
+		ctx.beginPath();
+		ctx.ellipse(...lostC, w, w, 0, 0, _2PI);
+		ctx.fill();
+		ctx.moveTo(...lostC);
+		ctx.lineTo(...lastC);
+		ctx.stroke();
+		
+		ctx.restore();
+	}
+	ctx.fillStyle = color;
+	ctx.strokeStyle = color;
+	if (lastCoords !== coords) {
+		info.distance += distance;
+		
+		if (info.distance > 1000) {
+			info.distance -= 1000;
+			info.currentLength++;
+		}
+		ctx.beginPath();
+		ctx.moveTo(...lastCoords);
+		ctx.lineTo(...coords);
+		ctx.stroke();
+		line = isOk(info, coords, lastCoords);
+		if (!line) {
+			ctx.restore();
+			info.isActive = false;
+			drawSnake(identifier, 0);
+			checkEnd();
+			
+			return;
+		}
+	}
+	ctx.beginPath();
+	ctx.ellipse(...coords, w, w, 0, 0, _2PI);
+	ctx.fill();
+	ctx.restore();
+	points.unshift(coords);
+	lastPoints[identifier] = points;
+}
+function startCountDown(counter = startCountDown.counter) {
+	clearTimeout(startCountDown.timer);
+	back.textContent = counter;
+	if (counter <= 0) {
+		setBattle();
+	} else {
+		startCountDown.counter = counter - 1;
+		startCountDown.timer = setTimeout(startCountDown, 1000);
+	}
+}
+startCountDown.clear = function() {
+	clearTimeout(startCountDown.timer);
+	back.textContent = '';
+	comment.textContent = '';
+}
+startCountDown.timer = 0;
+startCountDown.counter = 5;
+function setStart() {
+	back.className = 'back';
+	ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+	startCountDown.clear();
+	comment.textContent = 'touch the screen';
+	currentMode = 0;
+	lastPoints = [];
+	lastSegments = [];
+	touchInfo = [];
+}
+function setBattle() {
+	ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+	currentMode = 1;
+	back.textContent = 'Go';
+	setTimeout(startCountDown.clear, 1000);
+}
+function setEnd(winner) {
+	currentMode = 2;
+	comment.textContent = 'The Winner is player ' + winner.identifier;
+	back.classList.add('color' + winner.identifier);
+	back.textContent = 'W';
+	setTimeout(() => {currentMode = 3; checkEnd();}, 3000);
+}
+function checkEnd() {
+	const active = touchInfo.filter(i => i.isActive);
+	if (currentMode === 0) {
+		if (active.length === 0) {
+			setStart();
+		} else
+		if (active.length === 1) {
+			startCountDown.clear();
+			comment.textContent = 'waiting another player';
+		} else
+		if (active.length > 1) {
+			startCountDown(initCountDown);
+			comment.textContent = '';
+		}
+	} else
+	if (currentMode === 1) {
+		if (active.length <= 1) {
+			setEnd(active[0]);
+		}
+	} else
+	if (currentMode === 3) {
+		if (active.length === 0) {
+			setStart();
+			resize();
+		}
+	}
+}
+function inactive(identifier, repeat = true) {
+	const info = touchInfo[identifier];
+	if (!info) {
+		return;
+	} else
+	if (info.isActive) {
+		if (currentMode === 0) {
+			info.isActive = false;
+			drawPoint(info.identifier);
+			checkEnd();
+		} else
+		if (currentMode === 1) {
+			info.life -= 5;
+			drawSnake(identifier, info.life);
+			if (info.life <= 0) {
+				info.isActive = false;
+				checkEnd();
+			} else {
+				if (repeat) {
+					clearTimeout(info.timer);
+					info.timer = setTimeout(inactive, 400, identifier);
+				}
+			}
+		} else
+		if (currentMode >= 2) {
+			info.isActive = false;
+			checkEnd();
+		}
+	}
+}
+/* Event handlers */
+canvas.ontouchmove = function(event) {
+	event.preventDefault();
+	// const touches = event.touches;
+	const touches = event.changedTouches;
+	const f = currentMode === 0 ? drawPoint : addDrawSnake;
+	// const touches = event.targetTouches;
+	for (let t of touches) {
+		const identifier = id[t.identifier];
+		const info = touchInfo[identifier];
+		if (info && info.isActive) {
+			f(identifier, [t.clientX, t.clientY]);
+		}
+	}
+};
+canvas.ontouchend = function(event) {
+	const touch = event.changedTouches[0];
+	const identifier = id[touch.identifier];
+	const info = touchInfo[identifier];
+	
+	if (!info) return;
+	inactive(identifier);
+	info.isOut = true;
+};
+canvas.ontouchstart = function(event) {
+	const touch = event.changedTouches[0];
+	const identifier = touch.identifier;
+	const position = [touch.clientX, touch.clientY];
+	if (!touchInfo[identifier]) {
+		touchInfo[identifier] = {
+			identifier: identifier,
+			timer: 0,
+			life: 50,
+			isActive: currentMode === 0,
+			isOut: false,
+			currentLength: 10,
+			distance: 0
+		};
+		lastPoints[identifier] = [];
+		lastSegments[identifier] = [];
+	}
+	// find the best snake
+	if (currentMode === 0) {
+		id[identifier] = identifier;
+	} else {
+		let touchId = [-1, 50];
+		touchInfo.forEach((info, i) => {
+			if (info.isActive) {
+				let d = getDistance(position, lastPoints[info.identifier][0]);
+				if (d < touchId[1]) {
+					touchId = [i, d];
+				}
+			}
+		});
+		if (touchId[0] !== -1) {
+			id[identifier] = touchId[0];
+		} else {
+			id[identifier] = -1;
+			return false;
+		}
+	}
+	const info = touchInfo[id[identifier]];
+	clearTimeout(info.timer);
+	info.life = 50;
+	info.isOut = false;
+	if (currentMode === 0) {
+		info.isActive = true;
+		drawPoint(info.identifier, position);
+		checkEnd();
+	} else {
+		addDrawSnake(info.identifier, position);
+	}
+}
+function resize() {
+	if (currentMode === 0) {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+	}
+}
+window.onresize = resize;
+resize();
+setStart();
+document.querySelector('.compatibility').textContent = '';
+window.onerror = function(event) {
+	comment.innerHTML += '<hr>'+event.message +'<hr>';
+}
+</script>
+</body>
+</html>
