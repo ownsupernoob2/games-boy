@@ -1,4 +1,4 @@
-// ----------------------------------------------------------------------------
+ // ----------------------------------------------------------------------------
  // Buzz, a Javascript HTML5 Audio library
  // v1.1.10 - Built 2015-04-20 13:05
  // Licensed under the MIT license.
@@ -8,7 +8,7 @@
  // http://jaysalvat.com/
  // ----------------------------------------------------------------------------
 
- (function(context, factory) {
+(function(context, factory) {
     "use strict";
     if (typeof module !== "undefined" && module.exports) {
         module.exports = factory();

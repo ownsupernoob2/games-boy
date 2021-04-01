@@ -11,10 +11,6 @@
 	background-color: #8295d5;
 }
 
-::-webkit-scrollbar-thumb:active { 
-	background-color: #abb7dd;
-}
-
 @font-face { 
 	font-family: 'Oswald-Light'; 
 	src: url('../css/Oswald-Light.ttf'); 
@@ -162,6 +158,11 @@ body {
 	padding-left: 15px;
 }
 
+.github { 
+	position: absolute;
+	bottom: 0px;
+	left: 5px;
+}
 
 .square { 
 	width: 23px;
@@ -279,8 +280,8 @@ h2 {
 
 #scores { 
 	position: absolute;
-    margin: auto;
-    top: 420px;
+	top: 420px;
+	margin-auto;
 	left: 0px;
 	right: 0px;
 	text-align: center;
@@ -452,5 +453,64 @@ h2 {
 	#board-next { 
 		width: 60px;
 		height: 64px;
-    }
+	}
+	#level, #lines, #score, #next { 
+		width: 100px;
+		height: 39px;
+		font-size: 10px;
+		padding-left: 10px;
+		margin-bottom: 15px;
+		margin-left: 2px;
+	}
+	#panel h2 {
+		font-size: 12px;
+	}
+	#next { 
+		margin-bottom: 0px;
+		height: 86px;
+	}
+	#level span, #lines span, #score span { 
+		font-size: 14px;
+		padding-left: 10px;
+	}
+
+	.square { 
+		width: 12px;
+		height: 12px;
+	}
+	
+	#control { 
+		position: absolute;
+		width: 260px;
+		height: 40px;
+		margin-top: 345px;
+	}
+	#control div { 
+		width: 36px;
+		height: 36px;
+	}
+	#control div.move-left { 
+		top: 2px;
+		right: 45px;
+	}
+	#control div.move-right { 
+		top: 2px;
+		right: 5px;
+	}
+	#control div.move-down { 
+		top: 2px;
+		right: 95px;
+	}
+	#control div.rotate { 
+		top: 2px;
+		right: 130px;
+	}
+	#control div.pause { 
+		top: 2px;
+		left: 5px;
+	}
+	#control div.view-next, #control div.view-next.not { 
+		top: 2px;
+		left: 45px;
+	}
 }

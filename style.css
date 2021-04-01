@@ -4,7 +4,19 @@ html {
 
 
 
+#me{
+  filter: grayscale(100%);
+  border-radius: 12px;
+}
 
+#me:hover{
+  transition: 1s;
+  filter: grayscale(0%);
+  width: 319px;
+  border-radius: 15px;
+  box-shadow: 10px -3px 60px rgb(104, 104, 104);
+  box-shadow: 0 4px px rgba(0,0,0,0.2);
+}
 
 
 
@@ -21,28 +33,8 @@ body {
 }
 
 
-#box {
 
-    border-radius: 15px;
-  background-color:white;
 
-  box-shadow: 5px 5px grey;
-  margin-top: 1cm;
-  padding-bottom: 3cm;
-}
-
-#text {
-    border-radius: 15px;
-
-    text-align:center;
-    color:rgb(60, 58, 76);
-    background-color:rgb(219, 219, 219);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: 'Asap', sans-serif;
-
-    
-}
 #pargraph {
   text-align: center;
   color:rgb(139, 131, 131);
@@ -224,6 +216,8 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
     color:rgb(7, 7, 7);
   }
 
+  
+
    .dark-mode-mobile {
     position: absolute;
     right:100px;
@@ -283,12 +277,10 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
 #welcome {
    
   padding-top:7px;
- 
-
   position: absolute;
   border-radius: 15px;
   top: 100px;
-  height: 3600px;
+  height: 3090px;
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -303,7 +295,7 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
 @media (max-width: 805px) {
   #welcome{
     top:293px;
-    height: 3859px;
+    height: 3400px;
   }
 }
 
@@ -317,31 +309,63 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
 
 
 
-
  
 #game {
   position: absolute;
-  top: 3800px;
+  padding-top: 30px;
+padding-bottom:0px;
+  top: 3500px;
   background:rgb(216, 216, 216);
-  padding:20px;
+  padding:10px;
   border-radius:15px;
-  right: 89px;
   left:1cm;
+  margin-left: 130px;
+
   
  border:solid rgb(0, 0, 0) 1px;
+ height:570px; 
+ width:1000px;
 
 }
  
 
-@media (max-width: 768px) {
+@media (max-width: 699px) {
   #game{
-    top:4200px;
+    top:3800px;
     right:68px;
+   width: 250px;
    
+    margin-left: 0px;
+    padding:0px;
     
     
   }
 }
+
+@media (max-width: 895px) {
+  #game{
+    top:3800px;
+    right:68px;
+    margin-left: 10px;
+    width: 600px;
+   
+
+    
+  }
+}
+
+@media (max-width: 1028px) {
+  #game{
+    top:3800px;
+    right:68px;
+    margin-left: 3px;
+    width: 700px;
+   
+
+    
+  }
+}
+
 
   
   
@@ -473,6 +497,45 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
  
   }
 
+  .card7{
+    width: 200px; 
+    overflow: hidden;
+    background-color: #FFFFFF;
+     
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+ 
+  }
+
+  .card8{
+    width: 200px; 
+    overflow: hidden;
+    background-color: #FFFFFF;
+     
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+ 
+  }
+
+  .card9{
+    width: 200px; 
+    overflow: hidden;
+    background-color: #FFFFFF;
+     
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    -webkit-transition: .1s ease-in-out;
+    transition: .1s ease-in-out;
+ 
+  }
+
     .card:first-of-type{
       margin-right: 25px;
       
@@ -507,7 +570,20 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
       margin-right: 25px;
       
     }
-  
+    .card7:first-of-type{
+      margin-right: 25px;
+      
+    }
+
+    .card8:first-of-type{
+      margin-right: 25px;
+      
+    }
+    .card9:first-of-type{
+      margin-right: 25px;
+      
+    }
+
     .card:hover{
     
       
@@ -558,6 +634,27 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
         box-shadow: 0 4px px rgba(0,0,0,0.2);
     
         }
+
+        .card7:hover{
+      
+          box-shadow: 10px -3px 60px rgb(104, 104, 104);
+          box-shadow: 0 4px px rgba(0,0,0,0.2);
+      
+          }
+
+          .card8:hover{
+      
+            box-shadow: 10px -3px 60px rgb(104, 104, 104);
+            box-shadow: 0 4px px rgba(0,0,0,0.2);
+        
+            }
+    
+            .card9:hover{
+          
+              box-shadow: 10px -3px 60px rgb(104, 104, 104);
+              box-shadow: 0 4px px rgba(0,0,0,0.2);
+          
+              }
   
 
 
@@ -569,6 +666,7 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
     background-color: rgb(182, 165, 165);
     background-size: cover;
     background-position: center;
+    padding-bottom: 0px;
   }
 
   
@@ -615,6 +713,27 @@ box-shadow: 10px -3px 3px rgb(172, 17, 17);
    
     
     }
+
+    .card7:first-of-type .banner{
+      background-image: url("images/avatar4.jpg");
+   
+    
+    }
+
+    .card8:first-of-type .banner{
+      background-image: url("ludo-multiplayer-master/icon-256.png");
+   
+    
+    }
+
+    .card9:first-of-type .banner{
+      background-image: url("");
+   
+    
+    }
+
+
+
 
   
   
@@ -711,6 +830,45 @@ background-image: url("../snake/Snake-game-v2.0/img/Logo.png");
   }
 
   
+  .avatar7{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #212121;
+          border-radius: 100%;
+    background-image: url("images/avatar4.jpg");
+    border: #212121 solid 5px;
+  }
+
+  .avatar8{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #212121;
+          border-radius: 100%;
+    background-image: url('ludo-multiplayer-master/icon-256.png');
+    border: #212121 solid 5px;
+  }
+  .avatar9{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-color: #212121;
+          border-radius: 100%;
+    background-image: url("");
+    border: #212121 solid 5px;
+  }
+
+
+
+
+  
   h3, .a, .i{
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
@@ -725,6 +883,19 @@ background-image: url("../snake/Snake-game-v2.0/img/Logo.png");
       color: #212121;
       
     }
+
+    #game::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    #game::-webkit-scrollbar-track{
+      background: rgb(197, 197, 197);
+    }
+    
+    #game::-webkit-scrollbar-thumb{
+      background: rgb(105, 105, 105);
+    }
+    
   
     .a{
       display: block;
@@ -758,6 +929,7 @@ background-image: url("../snake/Snake-game-v2.0/img/Logo.png");
         .ul .a .i:hover{
           transform: scale(1.5);
         }
+        
 
 
 /* ---------------------------------------------- C A R D - G A M E-------------------------------------------------------------- */
@@ -774,7 +946,7 @@ background-image: url("../snake/Snake-game-v2.0/img/Logo.png");
   width: 60vw;
 	padding: 3em 11em;
   margin: auto;
-  top: 5000px;
+  top: 4500px;
   border: solid rgb(51, 51, 51) 2px;
   border-radius: 15px;
   background:rgb(255, 255, 255);
@@ -840,7 +1012,7 @@ right:100px;
     position: relative;
     width: 90%;
     padding:5px;
-    top:7390px;
+    top:4700px;
     right:0;
     
     
